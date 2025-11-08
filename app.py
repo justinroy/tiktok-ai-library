@@ -1,3 +1,15 @@
+import os, json
+
+# --- LOAD GOOGLE CLOUD CREDENTIALS FROM STREAMLIT SECRETS ---
+if creds_json := os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON"):
+    creds_dict = json.loads(creds_json)
+    with open("/tmp/streamlit-key.json", "w") as f:
+        json.dump(creds_dict, f)
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/tmp/streamlit-key.json"
+
+# --- SET GCP PROJECT ---
+if project_id := os.getenv("GCP_PROJECT_ID"):
+    os.environ["GOOGLE_CLOUD_PROJECT"] = project_id
 import streamlit as st
 import pandas as pd
 import json
