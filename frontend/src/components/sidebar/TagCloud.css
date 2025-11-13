@@ -1,0 +1,45 @@
+.tag-cloud {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tag-cloud h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.tag-cloud-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-cloud-item {
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  background: var(--surface-subtle);
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.tag-cloud-item:hover {
+  background: var(--surface); 
+  transform: translateY(-1px);
+}
+
+.tag-cloud-item.active {
+  background: var(--accent-muted);
+  color: var(--accent-text);
+}
+
+.tag-count {
+  font-size: 0.8em;
+  opacity: 0.7;
+}

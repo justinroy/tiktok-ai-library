@@ -1,0 +1,31 @@
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.search-label {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.search-bar input {
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  background: var(--surface-subtle);
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.search-bar input:focus {
+  outline: 2px solid var(--accent-muted);
+  border-color: transparent;
+}
+
+.search-spinner {
+  align-self: flex-end;
+  margin-top: -1.5rem;
+  margin-right: 0.75rem;
+}
